@@ -8,7 +8,6 @@ from langchain.chains import RetrievalQA
 import os
 
 
-os.environ["OPENAI_API_KEY"] = "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"
 
 def generate_response(uploaded_file, openai_api_key, query_text):
     # Load document if file is uploaded

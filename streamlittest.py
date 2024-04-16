@@ -44,7 +44,6 @@ llm = LlamaCpp(
 model_name = "BAAI/bge-large-en-v1.5"
 model_kwargs = {"device": "cuda"}
 
-os.environ["OPENAI_API_KEY"] = "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"
 
 def generate_response(uploaded_file, query_text):
     # Load document if file is uploaded
