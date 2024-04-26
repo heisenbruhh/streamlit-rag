@@ -15,6 +15,12 @@ import torch
 print(torch.cuda.is_available())
 import os
 
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+# Update with your API URL if using a hosted instance of Langsmith.
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+os.environ["LANGCHAIN_API_KEY"] = "ls__0e64166974664425ae518cd7e861df90"  # Update with your API key
+os.environ["LANGCHAIN_PROJECT"] = "testing"  # Change to your project name
+
 template =  """Use the following pieces of context to answer the question at the end.
             If you don't know the answer, just say that you don't know, don't try to make up an answer.
             {context}
