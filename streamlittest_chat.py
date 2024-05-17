@@ -16,7 +16,7 @@ import torch
 print(torch.cuda.is_available())
 
 # Define the path for generated embeddings
-DB_PATH = 'F:\Aakash\dbstore'
+# DB_PATH = 'F:\Aakash\dbstore'
 
 
 template =  """Use the following pieces of context to answer the question at the end.
@@ -53,9 +53,9 @@ uploaded_file = st.sidebar.file_uploader("Upload File", type="txt")
 
 # Handle file upload
 if uploaded_file:
-    # with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
-    #     tmp_file.write(uploaded_file.getvalue())
-    #     tmp_file_path = tmp_file.name
+    with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+        tmp_file.write(uploaded_file.getvalue())
+        tmp_file_path = tmp_file.name
 
     # Load CSV data using CSVLoader
     data = [uploaded_file.read().decode()]
